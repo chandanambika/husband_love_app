@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Date With You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="decor">💕 ✨ 💗 ✨ 💕</div>
+
+    <main class="card">
+
+        <!-- PAGE 1 -->
+        <section id="page1">
+            <div class="emoji">🐻</div>
+            <h2>💐 Will you go on a date with me? 💐</h2>
+            <p>I have a little surprise for you! 💌</p>
+
+            <button onclick="nextPage(2)">YES 💖</button>
+            <button class="no" onclick="sayNo()">NO 🙈</button>
+            <p id="noMessage"></p>
+        </section>
+
+        <!-- PAGE 2 -->
+        <section id="page2" class="hidden">
+            <div class="emoji">💌</div>
+            <h2>So... when are you free?</h2>
+            <p>Pick a Day 📅</p>
+
+            <input type="date" id="date">
+
+            <p>What Time? ⏰</p>
+            <select id="time">
+                <option value="">Select a time</option>
+                <option>10:00 AM</option>
+                <option>12:00 PM</option>
+                <option>2:00 PM</option>
+                <option>4:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+            </select>
+
+            <button onclick="nextPage(3)">Let's Pick Our Date 💗</button>
+        </section>
+
+        <!-- PAGE 3 -->
+        <section id="page3" class="hidden">
+            <div class="emoji">🍓</div>
+            <h2>What are we feeling? ✨</h2>
+            <p>Pick our date mood!</p>
+
+            <div class="food-grid">
+                <button class="food" onclick="chooseFood('Pizza 🍕',this)">🍕<br>Pizza</button>
+                <button class="food" onclick="chooseFood('Noodles 🍜',this)">🍜<br>Noodles</button>
+                <button class="food" onclick="chooseFood('Burger 🍔',this)">🍔<br>Burgers</button>
+                <button class="food" onclick="chooseFood('Fries 🍟',this)">🍟<br>Fries</button>
+                <button class="food" onclick="chooseFood('Ice Cream 🍦',this)">🍦<br>Ice Cream</button>
+                <button class="food" onclick="chooseFood('Sweets 🍰',this)">🍰<br>Sweets</button>
+            </div>
+
+            <button onclick="nextPage(4)">Continue 💕</button>
+        </section>
+
+        <!-- PAGE 4 -->
+        <section id="page4" class="hidden">
+            <div class="emoji">💖</div>
+            <h2>Our date plan! ✨</h2>
+
+            <div class="summary">
+                <p>Date: <span id="finalDate"></span></p>
+                <p>Time: <span id="finalTime"></span></p>
+                <p>Food: <span id="finalFood"></span></p>
+            </div>
+
+            <button onclick="finishDate()">Confirm our date 💕</button>
+            <p id="finalMessage"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+    background: linear-gradient(135deg, #fce0eb, #f8edf2, #f6d3e1);
+    color: #713c50;
+}
+
+.decor {
+    position: fixed;
+    top: 15px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    font-size: 23px;
+}
+
+.card {
+    width: 100%;
+    max-width: 440px;
+    padding: 30px 22px;
+    border-radius: 18px;
+    text-align: center;
+    background: #fffdf9;
+    box-shadow: 0 12px 35px #a94d7120;
+}
+
+.hidden {
+    display: none;
+}
+
+#page1 {
+    position: relative;
+    min-height: 330px;
+}
+
+.emoji {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 23px;
+    line-height: 1.5;
+    color: #873d5d;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0 20px;
+    border: 1px solid #e6b6ca;
+    border-radius: 9px;
+    background: white;
+    color: #713c50;
+    font-size: 15px;
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    padding: 13px 20px;
+    margin: 8px 3px;
+    background: #d94e88;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b92f6c;
+}
+
+.no {
+    background: #e7b5c9;
+    color: #713c50;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.food {
+    min-height: 82px;
+    margin: 0;
+    padding: 10px 3px;
+    background: #fff0f5;
+    color: #713c50;
+    border: 1px solid #f0d2df;
+    border-radius: 12px;
+}
+
+.food.selected {
+    background: #d94e88;
+    color: white;
+}
+
+.summary {
+    margin: 22px 0;
+    padding: 15px;
+    background: #fff0f5;
+    border: 1px dashed #d94e88;
+    border-radius: 12px;
+}
+
+#finalMessage {
+    color: #d12e76;
+    font-weight: bold;
+}
+
+@media (max-width: 360px) {
+    .card {
+        padding: 22px 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
